@@ -15,11 +15,14 @@ def isRotation(s1, s2):
             for char_i in range(i,len(s2)):
                 substr2_p2.append(s2[char_i])
             break
-
     return isSubstring(s1, ''.join(substr2_p2) + ''.join(substr2_p1))
 
+def isRotationSimple(s1, s2):
+    return isSubstring(s1, s2+s2)
 
 print isRotation("hello", "lohel")
 print isRotation("hello", "lohell")
 
+print isRotationSimple("hello", "lohel")
+print isRotationSimple("hello", "lohell")
 
