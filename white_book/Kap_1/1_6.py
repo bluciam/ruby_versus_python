@@ -26,6 +26,8 @@ def rotate_90_superlong(matrix):
         new_mat.append(new_row)
     return new_mat
 
+def rotate_90_super(matrix):
+    return zip(*matrix)
 
 matrix = [
           [1,2,3,0],
@@ -41,3 +43,5 @@ print
 print rotate_90_long(matrix)
 print
 print rotate_90_superlong(matrix)
+print
+print rotate_90_super(matrix)
