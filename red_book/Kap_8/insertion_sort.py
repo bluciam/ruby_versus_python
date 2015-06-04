@@ -1,4 +1,7 @@
 def insert_sort(aList, elem):
+    """ 
+    Inserting one element at a time into a list. Return list.
+    """
     if len(aList) == 0:
         aList.append(elem)
         print aList
@@ -20,3 +23,7 @@ b = insert_sort(b, 4)
 b = insert_sort(b, 1)
 b = insert_sort(b, 9)
 b = insert_sort(b, 'l')
+
+a = [5,6,9]
+insert_sort(a, 3)
+print a

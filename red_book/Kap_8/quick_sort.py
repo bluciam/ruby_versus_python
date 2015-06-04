@@ -1,4 +1,7 @@
 def quick_sort(aList):
+    '''
+    Quick sort recursively, returns sorted array
+    '''
     pivot = len(aList)/2
     if pivot == 0:
         return aList[pivot:pivot+1]
