@@ -15,7 +15,6 @@ class MyQueue:
             self.empty_stack(self.stack_out, self.stack_in)
         return self.stack_in.pop()
 
-
     def empty_stack(self, stack1, stack2):
         '''
         Empty stack1 into stack2
