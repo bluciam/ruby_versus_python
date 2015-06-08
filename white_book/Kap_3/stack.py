@@ -4,8 +4,6 @@ class Stack:
             self.stack = []
         else:
             self.stack = input_stack
-#    def __init__(self, input_stack=[]):
-#        self.stack = input_stack
 
     def pop(self):
         return  self.stack.pop()
