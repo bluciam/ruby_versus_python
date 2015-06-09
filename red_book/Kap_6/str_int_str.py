@@ -6,7 +6,8 @@ def string_char(string):
         mult = -1
         exp -= 1
     for i in range(start,len(string)):
-        number += int(string[i]) * 10**exp
+        number += (ord(string[i])-48) * 10**exp
+#        number += int(string[i]) * 10**exp
         exp -= 1
     return number * mult
 
@@ -35,10 +36,10 @@ def char_string(number):
     return ''.join(string)
 
 
-print string_char('123')
-print string_char('-9878')
+print string_char('103')
+print string_char('-9808')
 print string_char('0')
 
 print char_string(69)
-print char_string(-2569)
+print char_string(-2069)
 print char_string(0)
