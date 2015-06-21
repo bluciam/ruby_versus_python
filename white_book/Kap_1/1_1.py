@@ -1,3 +1,6 @@
+# are_repeated2 currently only works for a string. Not for lists, because the
+# set operator tends to rearrange the list. 
+
 def are_repeated(string):
     for i,c in enumerate(string):
         print i, c
@@ -9,7 +12,9 @@ def are_repeated(string):
 
 def are_repeated2(string):
     a = list(set(string))
+    print a
     b = list(string)
+    print b
     if a == b:
         return False
     else:

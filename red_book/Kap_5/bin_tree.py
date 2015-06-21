@@ -80,6 +80,21 @@ class Node:
         return '<' + self.left.__repr__() + \
             str(self.value) + self.right.__repr__() + '>'
             
+    def hello(self, depth=0):
+        ret = ""
+
+        # Print right branch
+        if self.right != None:
+            ret += self.right.hello(depth + 1)
+
+        # Print own value
+        ret += "\n" + ("    "*depth) + str(self.value)
+
+        # Print left branch
+        if self.left != None:
+            ret += self.left.hello(depth + 1)
+
+        return ret
 
 
 my_bst = Node()
@@ -97,7 +112,11 @@ my_bst.traverse_pre()
 print
 print my_bst.height()
 
-print my_bst
+# Based on http://stevekrenzel.com/articles/printing-trees
+# Also check
+# http://articles.leetcode.com/2010/09/how-to-pretty-print-binary-tree.html
+# http://stackoverflow.com/questions/5029576/print-a-binary-tree-python-in-inorder
+print my_bst.hello(3)
 
 print my_bst.find(5)
 print my_bst.find_ancestor(2,7).value
